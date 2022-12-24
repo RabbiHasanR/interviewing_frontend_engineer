@@ -1,0 +1,4 @@
+// call()
+// apply()
+// bind()
+
