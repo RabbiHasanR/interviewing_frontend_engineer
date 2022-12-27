@@ -8,17 +8,17 @@
 
 //  First Solution
 
-// function removingDuplicates(str) {
-//   let results = [];
+function removingDuplicates(str) {
+  let results = [];
 
-//   str.split(" ").forEach((i) => {
-//     if (!results.includes(i)) {
-//       results.push(i);
-//     }
-//   });
+  str.split(" ").forEach((i) => {
+    if (!results.includes(i)) {
+      results.push(i);
+    }
+  });
 
-//   return results.join(' ');
-// }
+  return results.join(' ');
+}
 
 // Second Solution
 function removingDuplicates(str) {
