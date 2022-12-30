@@ -1,3 +1,4 @@
+// change scope using:
 // call()
 // apply()
 // bind()
@@ -15,18 +16,18 @@
 
 // For solution you have to know scope, context , call and apply
 
-// Function.prototype.bind = function (context) {
-//     const fn = this;
+Function.prototype.bind = function (context) {
+    const fn = this;
 
-//     return function () {
-//         fn.call(context)
-//     }
-// }
+    return function () {
+        fn.call(context)
+    }
+}
 
-// const foo = function() {
-//     console.log(this.bar);
-// }
-// let baz = foo.bind({bar: 'hello'})
-// baz(); 
+const foo = function() {
+    console.log(this.bar);
+}
+let baz = foo.bind({bar: 'hello'})
+baz(); 
 
 
