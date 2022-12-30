@@ -7,11 +7,20 @@
     function moveElement(duration, distance, element) {}
 */
 
+function moveElement(duration, distance, element) {
+    const start = performance.now();
 
-function display(){
-    var b = 40;
-    console.log(b);
+    function move(currentTime) {
+        const elapsed = currentTime - start;
+        const progress = elapsed / duration;
+        const amountToMove = progress * distance;
+
+        element.style.tranform = `translateX(${ amountToMove }px)`;
+
+        if (amountToMove < distance) {
+            requestAnimationFrame(move)
+        }
+    }
+
+    requestAnimationFrame(move)
 }
-
-display();
-console.log(b);
